@@ -12,6 +12,20 @@ Registration is required to attend training offerings. Participants may regi
 
 Register [here](https://web.cvent.com/event/160bafab-c67a-4bf8-a5f5-af2526de6b2e/regProcessStep1)!
 
+## Repository Contents
+
+- [01 Overview and Data Scavenger Hunt](01_overview_scavenger_hunt/)
+- [02 Introduction to Omics](02_intro_omics/)
+- [03 Speed Networking](03_speed_networking/)
+- [04 Galaxy Part 1](04_galaxy_part_1/)
+- [05 Galaxy Part 2](05_galaxy_part_2/)
+- [06 Introduction to R](06_intro_to_R/)
+- [07 Data Wrangling](07_data_wrangling/)
+- [08 Git](08_git/)
+- [09 Data Visualization](09_data_viz/)
+- [10 Capstone](10_capstone/)
+- [Resources](resources/)
+
 ## Overview 
 The DeCoDE Institute combines structured hands-on training with collaborative capstone projects to build practical skills in data science, with a focus on FAIR principles and the open-source tools and public data available from the Common Fund Data Ecosystem.   
 
