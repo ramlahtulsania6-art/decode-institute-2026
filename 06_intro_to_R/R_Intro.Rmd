@@ -583,7 +583,7 @@ Let's create a `geom_point` plot using the `pbc` data object with `age` in the `
 
 ## Pivoting Data
 
-This may not be the best way to visualize this data as we are most interested in the impact of exercise over time (endurance exercize) on VO max. In this context it may be a lot more useful to illustrate the change in VO2 max in the first and last training session across both sex and the various training groups. We could generate multiple scatter and line plots to quickly examine these variables utilizing the facet wrap command. However, we would first need to restructure some of our columns to a long format. The data is currently in wide format with each patient as a single row and each variable in a separate column. This is typically called "tidy data".
+This may not be the best way to visualize this data as we are most interested in the impact of exercise over time (endurance exercise) on VO max. In this context it may be a lot more useful to illustrate the change in VO2 max in the first and last training session across both sex and the various training groups. We could generate multiple scatter and line plots to quickly examine these variables utilizing the facet wrap command. However, we would first need to restructure some of our columns to a long format. The data is currently in wide format with each patient as a single row and each variable in a separate column. This is typically called "tidy data".
 
 ![](images/tidydata.png){width="204"}
 
