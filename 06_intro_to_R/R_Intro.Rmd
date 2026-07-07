@@ -424,21 +424,25 @@ Now that we know how to group data, we can use it in conjunction with the `summa
 
 ### Bonus problems
 
-How would we extract just PLASMA tissue samples?
-
-*Hint: Go back to the original rat_pheno data set. Use the ?PHENO (or help tab) as a reminder of which column this information can be found.*
+How do we calculate the average vo_max1 for male and female control rats?
 
 ```{r, solution=TRUE}
 
 ```
 
-How do we calculate the average VO2 max at the first visit for just the control rats?
+Create a new table containing only female rats whose vo_max2 is above the overall average.
 
 ```{r, solution=TRUE}
 
 ```
 
-How do we calculate the average VO2 max at the first visit for male and female control rats?
+How would we create a new data object with only the PLASMA tissue samples?
+
+```{r, solution=TRUE}
+
+```
+
+Calculate the percent improvement in vo2 max from session 1 to session 2. What is the pid of the rat that improved the most?
 
 ```{r, solution=TRUE}
 
