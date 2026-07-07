@@ -8,6 +8,8 @@ output:
 
 ## Welcome!
 
+New text here
+
 Hello, and welcome to this workshop! We are using an R Notebook. An R Notebook is an R Markdown document with code blocks that can be executed independently and interactively, with the output visible immediately beneath the input. They are an implementation of [Literate Programming](https://en.wikipedia.org/wiki/Literate_programming) that allows for direct interaction with the R programming language while producing a reproducible document with publication-quality output. R notebooks can also be rendered using the knit button ![](images/knit_button.png){width="53" height="23"} to create an HTML document that is easily viewable outside of R. We can see the difference between text and code as the text is in the white space and code blocks are in grey. To run any particular line of code, click the green play button ![](images/play%20button-01.png){width="14" height="17"} in that chunk, or with the cursor in the grey code block, press control, shift, enter (⬆⌘⏎) simultaneously.
 
 ```{r}
@@ -26,11 +28,11 @@ This notebook introduces you to the `MotrpacRatTraining6moData` package, which c
 
 An R Package is a collection of:
 
-- R functions
+-   R functions
 
-- Documentation and help files
+-   Documentation and help files
 
-- Sometimes built-in datasets (can be only a dataset)
+-   Sometimes built-in datasets (can be only a dataset)
 
 All packaged together for a specific purpose (for example: data visualization, statistics, or access to a particular dataset).
 
@@ -42,11 +44,11 @@ Packages are not automatically active when you start R.
 
 This is intentional because:
 
-- Packages are created by many different people with no global checks on function names, so they may end up clashing
+-   Packages are created by many different people with no global checks on function names, so they may end up clashing
 
-- Most projects only use a small handful of packages
+-   Most projects only use a small handful of packages
 
-- More than 20,000 packages would make loading R very slow
+-   More than 20,000 packages would make loading R very slow
 
 Because of this, we explicitly load only the packages we need for a given analysis.
 
@@ -62,13 +64,13 @@ GitHub is a public platform where developers share and collaborate on code.
 
 Packages on GitHub are often:
 
-- Under active development
+-   Under active development
 
-- Research or project-specific
+-   Research or project-specific
 
-- Many scientific datasets and analysis tools are distributed this way
+-   Many scientific datasets and analysis tools are distributed this way
 
-- Requires the `devtools` packages
+-   Requires the `devtools` packages
 
 ```{r}
 #install.packages("devtools") #This has already been installed
@@ -84,13 +86,13 @@ Bioconductor is a repository specifically for bioinformatics and computational b
 
 Widely used for:
 
-- Omics analysis (transcriptomics, proteomics, genomics)
+-   Omics analysis (transcriptomics, proteomics, genomics)
 
-- Other high-throughput biological data
+-   Other high-throughput biological data
 
-- Many Bioconductor packages depend on each other and follow a coordinated release schedule
+-   Many Bioconductor packages depend on each other and follow a coordinated release schedule
 
-- Requires the `BiocManager` packages
+-   Requires the `BiocManager` packages
 
 To install packages from Bioconductor, we use the BiocManager package:
 
@@ -102,11 +104,11 @@ To install packages from Bioconductor, we use the BiocManager package:
 
 3.  CRAN (Comprehensive R Archive Network)
 
-- CRAN is the main, official repository for R and R packages
+-   CRAN is the main, official repository for R and R packages
 
-- Mirrored to many cites around the world
+-   Mirrored to many cites around the world
 
-- Most general-purpose R packages live here
+-   Most general-purpose R packages live here
 
 To install a package from CRAN, we use:
 
@@ -120,23 +122,23 @@ This is the most common way you will install packages in R.
 
 These two steps are different and can be a bit confusing:
 
-- **Installing** a package:
+-   **Installing** a package:
 
-  - Downloads it to your computer or a specific cloud project
+    -   Downloads it to your computer or a specific cloud project
 
-  - You only need to do this once per computer or per project in posit cloud
+    -   You only need to do this once per computer or per project in posit cloud
 
-- **Loading** (or “turning on”) a package:
+-   **Loading** (or “turning on”) a package:
 
-  - Makes it available in your current R session
+    -   Makes it available in your current R session
 
-  - You need to do this every time you start a new session
+    -   You need to do this every time you start a new session
 
 We can check which packages are available by looking at the Packages tab in the lower-right panel in RStudio:
 
-- If there is a check mark next to a package name, it is currently loaded
+-   If there is a check mark next to a package name, it is currently loaded
 
-- If it appears in the list but is unchecked, it is installed but not loaded
+-   If it appears in the list but is unchecked, it is installed but not loaded
 
 For example, if we search for MotrpacRatTraining6moData, we may see that it is installed but not yet turned on. Let's go ahead and load the the MOTRPAC data package.
 
@@ -152,55 +154,55 @@ We can explore what datasets are accessible in the MotrpacRatTraining6moData by 
 
 ### Tissues
 
-- **ADRNL:** adrenal gland
-- **BAT:** brown adipose tissue
-- **BLOOD:** whole blood
-- **COLON:** colon
-- **CORTEX:** cerebral cortex
-- **HEART:** heart
-- **HIPPOC:** hippocampus
-- **HYPOTH:** hypothalamus
-- **KIDNEY:** kidney
-- **LIVER:** liver
-- **LUNG:** lung
-- **OVARY:** ovaries (female gonads)
-- **PLASMA:** plasma from blood
-- **SKM-GN:** gastrocnemius (leg skeletal muscle)
-- **SKM-VL:** vastus lateralis (leg skeletal muscle)
-- **SMLINT:** small intestine
-- **SPLEEN:** spleen
-- **TESTES:** testes (male gonads)
-- **VENACV:** vena cava
-- **WAT-SC:** subcutaneous white adipose tissue
+-   **ADRNL:** adrenal gland
+-   **BAT:** brown adipose tissue
+-   **BLOOD:** whole blood
+-   **COLON:** colon
+-   **CORTEX:** cerebral cortex
+-   **HEART:** heart
+-   **HIPPOC:** hippocampus
+-   **HYPOTH:** hypothalamus
+-   **KIDNEY:** kidney
+-   **LIVER:** liver
+-   **LUNG:** lung
+-   **OVARY:** ovaries (female gonads)
+-   **PLASMA:** plasma from blood
+-   **SKM-GN:** gastrocnemius (leg skeletal muscle)
+-   **SKM-VL:** vastus lateralis (leg skeletal muscle)
+-   **SMLINT:** small intestine
+-   **SPLEEN:** spleen
+-   **TESTES:** testes (male gonads)
+-   **VENACV:** vena cava
+-   **WAT-SC:** subcutaneous white adipose tissue
 
 ### Assays/omes
 
-- **ACETYL:** acetylproteomics; protein site acetylation
-- **ATAC:** chromatin accessibility, ATAC-seq data
-- **IMMUNO:** multiplexed immunoassays (cytokines and hormones)
-- **METAB:** metabolomics and lipidomics
-- **METHYL:** DNA methylation, RRBS data
-- **PHOSPHO:** phosphoproteomics; protein site phosphorylation
-- **PROT:** global proteomics; protein abundance
-- **TRNSCRPT:** transcriptomics, RNA-Seq data
-- **UBIQ:** ubiquitylome; protein site ubiquitination
+-   **ACETYL:** acetylproteomics; protein site acetylation
+-   **ATAC:** chromatin accessibility, ATAC-seq data
+-   **IMMUNO:** multiplexed immunoassays (cytokines and hormones)
+-   **METAB:** metabolomics and lipidomics
+-   **METHYL:** DNA methylation, RRBS data
+-   **PHOSPHO:** phosphoproteomics; protein site phosphorylation
+-   **PROT:** global proteomics; protein abundance
+-   **TRNSCRPT:** transcriptomics, RNA-Seq data
+-   **UBIQ:** ubiquitylome; protein site ubiquitination
 
 ### Summary of data
 
 Here is a brief summary of the kinds of data included in the data package:
 
-- Assay, tissue, sex, and training group abbreviations, codes, colors, and order used in plots
-- Phenotypic data, `PHENO`
-- Mapping between various feature identifiers, i.e., `FEATURE_TO_GENE`, `RAT_TO_HUMAN_GENE`
-- Ome-specific feature annotation, i.e., `METAB_FEATURE_ID_MAP`, `METHYL_FEATURE_ANNOT` (GCP only), `ATAC_FEATURE_ANNOT` (GCP only), `PROT_FEATURE_ANNOT` (GCP only), `PHOSPHO_FEATURE_ANNOT` (GCP only), `UBIQ_FEATURE_ANNOT` (GCP only), `ACETYL_FEATURE_ANNOT` (GCP only), `TRNSCRPT_FEATURE_ANNOT` (GCP only)
-- Ome-specific sample-level metadata, i.e., `TRNSCRPT_META`, `ATAC_META`, `METHYL_META`, `IMMUNO_META`, `PHOSPHO_META`, `PROT_META`, `ACETYL_META`, `UBIQ_META`
-- Raw counts for RNA-Seq (TRNSCRPT), ATAC-Seq (ATAC), and RRBS (METHYL) data, e.g., `TRNSCRPT_LIVER_RAW_COUNTS`. Note that epigenetic data (ATAC and METHYL) must be downloaded from Google Cloud Storage. See more details [here](https://motrpac.github.io/MotrpacRatTraining6moData/index.html#access-epigenomics-data-through-google-cloud-storage).
-- Normalized sample-level data, e.g., `TRNSCRPT_SKMGN_NORM_DATA`
-- Differential analysis results, e.g., `HEART_PROT_DA`
-- Sample outliers excluded from differential analysis, `OUTLIERS`
-- Table of training-regulated features at 5% FDR, `TRAINING_REGULATED_FEATURES`
-- Bayesian graphical analysis inputs and results
-- Pathway enrichment of main graphical clusters, `GRAPH_PW_ENRICH`
+-   Assay, tissue, sex, and training group abbreviations, codes, colors, and order used in plots
+-   Phenotypic data, `PHENO`
+-   Mapping between various feature identifiers, i.e., `FEATURE_TO_GENE`, `RAT_TO_HUMAN_GENE`
+-   Ome-specific feature annotation, i.e., `METAB_FEATURE_ID_MAP`, `METHYL_FEATURE_ANNOT` (GCP only), `ATAC_FEATURE_ANNOT` (GCP only), `PROT_FEATURE_ANNOT` (GCP only), `PHOSPHO_FEATURE_ANNOT` (GCP only), `UBIQ_FEATURE_ANNOT` (GCP only), `ACETYL_FEATURE_ANNOT` (GCP only), `TRNSCRPT_FEATURE_ANNOT` (GCP only)
+-   Ome-specific sample-level metadata, i.e., `TRNSCRPT_META`, `ATAC_META`, `METHYL_META`, `IMMUNO_META`, `PHOSPHO_META`, `PROT_META`, `ACETYL_META`, `UBIQ_META`
+-   Raw counts for RNA-Seq (TRNSCRPT), ATAC-Seq (ATAC), and RRBS (METHYL) data, e.g., `TRNSCRPT_LIVER_RAW_COUNTS`. Note that epigenetic data (ATAC and METHYL) must be downloaded from Google Cloud Storage. See more details [here](https://motrpac.github.io/MotrpacRatTraining6moData/index.html#access-epigenomics-data-through-google-cloud-storage).
+-   Normalized sample-level data, e.g., `TRNSCRPT_SKMGN_NORM_DATA`
+-   Differential analysis results, e.g., `HEART_PROT_DA`
+-   Sample outliers excluded from differential analysis, `OUTLIERS`
+-   Table of training-regulated features at 5% FDR, `TRAINING_REGULATED_FEATURES`
+-   Bayesian graphical analysis inputs and results
+-   Pathway enrichment of main graphical clusters, `GRAPH_PW_ENRICH`
 
 One important object in the data package is **PHENO**, which contains phenotypic information for every sample in the study. We can always get more information on any function or annotated dataset in R by using `?`, or typing PHENO in the help tab.
 
@@ -218,19 +220,19 @@ An R object contains information stored in R's temporary memory. It could be lis
 
 Object names have some general rules:
 
-- The first character can't be a number
+-   The first character can't be a number
 
-- It cannot contain special symbols
+-   It cannot contain special symbols
 
-- It cannot contain spaces
+-   It cannot contain spaces
 
-- Must use either an underscore (snake_case) or Capital letters (CamelCase) to break up multiple words
+-   Must use either an underscore (snake_case) or Capital letters (CamelCase) to break up multiple words
 
-- Names are case-sensitive. For example, If we call an object **C**ool**D**ata, we need to use the capital **C** and **D** to call it again later. If we try and print **c**ool**d**ata, nothing will happen.
+-   Names are case-sensitive. For example, If we call an object **C**ool**D**ata, we need to use the capital **C** and **D** to call it again later. If we try and print **c**ool**d**ata, nothing will happen.
 
-- Avoid commonly used names like: min, mean, max. How do you know the name is already used? Start typing a name in the code chunk and if it gets a colored highlight or suggested autocompletion its already in use!
+-   Avoid commonly used names like: min, mean, max. How do you know the name is already used? Start typing a name in the code chunk and if it gets a colored highlight or suggested autocompletion its already in use!
 
-- Names should be unique and understandable but short. We don't want to keep typing a really long name!
+-   Names should be unique and understandable but short. We don't want to keep typing a really long name!
 
 Once we create an object, we can print the data stored within it at any time by typing the object's name in a code block.
 
@@ -305,14 +307,14 @@ Generally we only want to work with the specific columns we will use in an analy
 
 Let's select a few variables:
 
-- **pid** – unique animal identifier (rat ID)
-- **viallabel** – unique sample identifier
-- **sex** – factor indicating male or female
-- **group** – simplified training group (control, 1w, 2w, 4w, 8w)
-- **intervention** – indicates whether the animal was in the training or control intervention
-- **weight** – body weight at sacrifice (terminal body weight)
-- **first VO2 max**- VO2 at max for the first training session
-- **last VO2 max**- VO2 at max for the last training session
+-   **pid** – unique animal identifier (rat ID)
+-   **viallabel** – unique sample identifier
+-   **sex** – factor indicating male or female
+-   **group** – simplified training group (control, 1w, 2w, 4w, 8w)
+-   **intervention** – indicates whether the animal was in the training or control intervention
+-   **weight** – body weight at sacrifice (terminal body weight)
+-   **first VO2 max**- VO2 at max for the first training session
+-   **last VO2 max**- VO2 at max for the last training session
 
 First we need to create a new object called `pheno_select` and we will assign to that object (`<-`) the output from using the `select` function on the `rat_pheno` object selecting just the `pid`, `viallabel`, `sex`, `group`, `intervention`. Let's also select the `terminal.weight.bw` but let's give it the shorter name `weight`. Finally let's select the first VO2 max measure (`vo2.max.test.vo2_max_1`) but shorten it to `vo_max1` as well as the last VO2 max measure (`vo2.max.test.vo2_max_2`) but shorten it to `vo_max2`. We also want to print the output which we can do by adding the name of the object in its own line.
 
@@ -460,9 +462,9 @@ The idea of the grammar of graphics is that you can build every graph from the s
 
 2.  Aesthetic mappings (aes): the assignment of data variables to visual coordinate system
 
-    - What variables will be plotted on the x versus y-axis
+    -   What variables will be plotted on the x versus y-axis
 
-    - What variables will be plotted as shapes, colors, lines, etc.
+    -   What variables will be plotted as shapes, colors, lines, etc.
 
 3.  A geometric object (geom): the type of plot used
 
@@ -600,17 +602,17 @@ We can change our data structure by using the [pivot_longer](https://tidyr.tidyv
 
 Let's create a new object called `pheno_long`.
 
-- We will take the `pheno_mutate` object and pipe `%>%` it into the `pivot_longer` function
+-   We will take the `pheno_mutate` object and pipe `%>%` it into the `pivot_longer` function
 
-- We want to to collect the VO variables into a single column but NOT (`!`) `pid` through (:) `weight`.
+-   We want to to collect the VO variables into a single column but NOT (`!`) `pid` through (:) `weight`.
 
-- The new combined VO column will be called `training_session`.
+-   The new combined VO column will be called `training_session`.
 
-- The values for each value will be in a single column called `vo_max`.
+-   The values for each value will be in a single column called `vo_max`.
 
-- We can pipe `%>%` this into the `group_by` function to group `sex`, `group` and the new `training_session` column.
+-   We can pipe `%>%` this into the `group_by` function to group `sex`, `group` and the new `training_session` column.
 
-- Once these are grouped then we can use the `summarize` function to calculate the mean VO max for each grouping. We need to remember to as `na.rm=TRUE` as there are some missing values.
+-   Once these are grouped then we can use the `summarize` function to calculate the mean VO max for each grouping. We need to remember to as `na.rm=TRUE` as there are some missing values.
 
 ```{r}
 pheno_long <- pheno_dist %>% 
